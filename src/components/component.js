@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  FaGlobe,
-  FaRuler,
-  FaSearchengin,
-  FaEnvelopeOpenText,
-  FaPercent,
-  FaLightbulb,
-} from "react-icons/fa";
+import { TfiText, TfiRulerAlt } from "react-icons/tfi";
+import { RiSearchEyeLine } from "react-icons/ri";
+import { BsGlobe, BsMegaphone } from "react-icons/bs";
+import { IoRibbonOutline } from "react-icons/io5";
+import { LuBadgePercent } from "react-icons/lu";
+import { TbBulb } from "react-icons/tb";
 
 const Component = () => {
   const data = [
@@ -58,50 +56,42 @@ const Component = () => {
     },
   ];
 
-  const getIcon = (icon) => {
-    const commonStyles = {
-      borderRadius: "50%",
-      border: "1px solid #ccc",
-      backgroundColor: "#fff",
-      marginRight: "10px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    };
-    const blueStyles = { color: "#2196F3", fill: "#2196F3" };
+  const iconStyles = {
+    border: "1px solid lightgray",
+    borderRadius: "50%",
+    backgroundColor: "#fff",
+    padding: "15px",
+    margin: "12px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
 
+  const getIcon = (icon) => {
     switch (icon) {
       case "icon1":
-        return <FaGlobe size={50} color="#2196F3" />;
-      case "icon2":
-        return <FaRuler size={50} color="#2196F3" />;
-      case "icon3":
-        return <FaGlobe size={50} color="#2196F3" />;
-      case "icon4":
-        return <FaRuler size={50} color="#2196F3" />;
-      case "icon5":
-        return <FaSearchengin size={50} color="#2196F3" />;
-      case "icon6":
-        return <FaEnvelopeOpenText size={50} color="#2196F3" />;
-      case "icon7":
-        return <FaPercent size={50} color="#2196F3" />;
-      case "icon8":
-        return <FaEnvelopeOpenText size={50} color="#2196F3" />;
-      case "icon9":
-        return <FaLightbulb size={50} color="#2196F3" />;
-      case "icon10":
         return (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 50 50"
-            width="50"
-            height="50"
-            style={{ ...commonStyles, ...blueStyles }}
-          >
-            <circle cx="25" cy="25" r="20" fill="#fff" />
-          </svg>
+          <div style={{ ...iconStyles, color: "#2196F3", fontWeight: "bold" }}>
+            {".com"}
+          </div>
         );
+      case "icon2":
+        return <TfiRulerAlt size={40} color="#2196F3" style={iconStyles} />;
+      case "icon3":
+        return <BsGlobe size={40} color="#2196F3" style={iconStyles} />;
+      case "icon4":
+        return <IoRibbonOutline size={40} color="#2196F3" style={iconStyles} />;
+      case "icon5":
+        return <RiSearchEyeLine size={40} color="#2196F3" style={iconStyles} />;
+      case "icon6":
+        return <BsMegaphone size={40} color="#2196F3" style={iconStyles} />;
+      case "icon7":
+        return <LuBadgePercent size={40} color="#2196F3" style={iconStyles} />;
+      case "icon8":
+        return <TfiText size={40} color="#2196F3" style={iconStyles} />;
 
+      case "icon9":
+        return <TbBulb size={40} color="#2196F3" style={iconStyles} />;
       default:
         return null;
     }
@@ -113,12 +103,16 @@ const Component = () => {
         <div
           key={index}
           className="item"
-          style={{ display: "flex", alignItems: "center" }}
+          style={{ display: "flex", alignItems: "left" }}
         >
           {getIcon(item.icon)}
           <div>
-            <div style={{ fontWeight: "bold" }}>{item.text}</div>
-            <div>{item.description}</div>
+            <div style={{ fontFamily: 'Myriad Pro Regular', fontWeight: "bold", textAlign: "left" }}>
+              {item.text}
+            </div>
+            <div style={{ fontFamily: "inherit", textAlign: "left" }}>
+              {item.description}
+            </div>
           </div>
         </div>
       ))}
