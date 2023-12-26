@@ -1,14 +1,13 @@
 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    flex: 0 0 calc(33.33% - 20px);
-    margin: 10px;
-    padding: 15px;
-    background-color: #ffffff;
-    text-align: center;
-    box-sizing: border-box;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 20px); 
+  margin: 10px;
+  padding: 15px;
+  background-color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+}

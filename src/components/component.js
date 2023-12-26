@@ -60,8 +60,8 @@ const Component = () => {
     border: "1px solid lightgray",
     borderRadius: "50%",
     backgroundColor: "#fff",
-    padding: "15px",
-    margin: "12px",
+    padding: "10px",
+    margin: "8px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -71,9 +71,9 @@ const Component = () => {
     switch (icon) {
       case "icon1":
         return (
-          <div style={{ ...iconStyles, color: "#2196F3", fontWeight: "bold" }}>
+          <p style={{ ...iconStyles, color: "#2196F3", fontWeight: "bold" }}>
             {".com"}
-          </div>
+          </p>
         );
       case "icon2":
         return <TfiRulerAlt size={40} color="#2196F3" style={iconStyles} />;
@@ -107,10 +107,23 @@ const Component = () => {
         >
           {getIcon(item.icon)}
           <div>
-            <div style={{ fontFamily: 'Myriad Pro Regular', fontWeight: "bold", textAlign: "left" }}>
+            <div
+              style={{
+                fontFamily: "Myriad Pro Regular",
+                fontWeight: "bold",
+                textAlign: "left",
+                fontSize: "16px",
+              }}
+            >
               {item.text}
             </div>
-            <div style={{ fontFamily: "inherit", textAlign: "left" }}>
+            <div
+              style={{
+                fontFamily: "inherit",
+                textAlign: "left",
+                fontSize: "14px",
+              }}
+            >
               {item.description}
             </div>
           </div>

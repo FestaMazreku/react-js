@@ -4,10 +4,22 @@
 }
 
 .box > .item {
-  flex: 0 0 calc(33.33% - 20px); 
+  flex: 0 0 calc(33.33% - 20px);
   margin: 10px;
   padding: 15px;
   background-color: #ffffff;
   text-align: center;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .box > .item {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .box > .item {
+    flex: 0 0 calc(100% - 20px);
+  }
 }
