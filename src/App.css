@@ -23,3 +23,9 @@
     flex: 0 0 calc(100% - 20px);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .box > .item {
+    flex: 0 0 calc(100% - 20px);
+  }
+}

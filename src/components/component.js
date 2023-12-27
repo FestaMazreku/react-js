@@ -14,41 +14,49 @@ const Component = () => {
       description:
         "Does the domain extension match the language of the domain name?",
     },
+
     {
       text: "Domain Length",
       icon: "icon2",
       description: "Is the domain short enough to remember?",
     },
+
     {
       text: "Language",
       icon: "icon3",
       description: "How complex is the actual domain name?",
     },
+
     {
       text: "International recognition",
       icon: "icon4",
       description: "Can the domain name be used on an international scale?",
     },
+
     {
       text: "Search engine",
       icon: "icon5",
       description: "Does the domain follow search engine guidelines?",
     },
+
     {
       text: "Advertising Potential",
       icon: "icon6",
       description: "Could the domain be used for advertising campaigns?",
     },
+
     {
       text: "Sales Opportunities",
       icon: "icon7",
       description: "Can the domain name be used on an international scale?",
     },
+    
     {
       text: "Typo susceptibility",
       icon: "icon8",
       description: "How high is the risk of mistyping the domain name?",
     },
+
     {
       text: "Business potential",
       icon: "icon9",
