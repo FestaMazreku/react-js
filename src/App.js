@@ -1,6 +1,7 @@
 import "./App.css";
 import Component from "./components/component";
 import Card from "./components/card";
+import Tab from './components/tab';
 
 function App() {
   const cardData = [
@@ -94,6 +95,7 @@ function App() {
           <Card key={index} {...data} />
         ))}
       </div>
+      <Tab />
     </div>
   );
 }
