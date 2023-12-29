@@ -50,7 +50,7 @@ const Component = () => {
       icon: "icon7",
       description: "Can the domain name be used on an international scale?",
     },
-    
+
     {
       text: "Typo susceptibility",
       icon: "icon8",

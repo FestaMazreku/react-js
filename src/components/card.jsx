@@ -2,6 +2,7 @@ import React from 'react';
 import './card.css';
 
 const Card = ({ date, title, body, buttonText, button, button2, button3 }) => {
+  
   const cardStyles = {
     textAlign: 'left',
     borderRadius: '8px',
