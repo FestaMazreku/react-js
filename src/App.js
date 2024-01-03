@@ -1,4 +1,5 @@
 import "./App.css";
+import useStateComponent from './components/usestate'; 
 import Component from "./components/component";
 import Card from "./components/card";
 import Tab from './components/tab';
@@ -97,6 +98,7 @@ function App() {
         ))}
       </div>
       <Tab />
+      <useStateComponent />
     </div>
   );
 }

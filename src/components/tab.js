@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './tab.css';
 
 const Card = ({ title, content }) => (
   <div
@@ -60,9 +61,10 @@ const TabsComponent = ({ tabData }) => {
             style={{
               padding: "8px",
               borderBottom:
-                selectedTab === index ? "2px solid blue" : "1px solid white",
+              selectedTab === index ? "2px solid blue" : "1px solid white",
               marginRight: "15px",
-              backgroundColor: selectedTab === index ? "white" : "#f4f4f4", // Change background color
+              backgroundColor: selectedTab === index ? "white" : "#f4f4f4", 
+
               color: selectedTab === index ? "black" : "inherit",
             }}
           >
