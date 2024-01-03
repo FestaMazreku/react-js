@@ -1,16 +1,30 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import "./usestate.css"; 
 
-const useStateComponent = () => {
-    const [name] = useState('hello');
+const ToggleText = () => {
+  const [showSecondText, setShowSecondText] = useState(false);
 
+  const handleClick = () => {
+    setShowSecondText((prev) => !prev);
+  };
 
-return (
-    <div className="home">
-        <h2> Home </h2>
-        <p> { name } </p>
-
+  return (
+    <div className={`toggle-container ${showSecondText ? "open" : ""}`} onClick={handleClick}>
+      <div className="text-container">
+        <p>
+          Why park a domain name in Parkname?
+        </p>
+        {showSecondText && (
+          <p>
+            Parkname is the leading industry standard for domain name parking
+            and monetization services. We offer a wide variety of services to
+            help you achieve success.
+          </p>
+        )}
+      </div>
+      <div className="arrow"></div>
     </div>
-);
-}
+  );
+};
 
-export default useStateComponent;
+export default ToggleText;

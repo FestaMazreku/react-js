@@ -1,12 +1,11 @@
 import "./App.css";
-import useStateComponent from './components/usestate'; 
 import Component from "./components/component";
 import Card from "./components/card";
-import Tab from './components/tab';
+import Tab from "./components/tab";
+import ToggleText from "./components/usestate";
 
 function App() {
   const cardData = [
-  
     {
       date: "3.3.0 (14/05/2018)",
       button: "New",
@@ -98,7 +97,9 @@ function App() {
         ))}
       </div>
       <Tab />
-      <useStateComponent />
+      <ToggleText />
+      <br>
+      </br>
     </div>
   );
 }

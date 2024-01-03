@@ -97,7 +97,6 @@ const Component = () => {
         return <LuBadgePercent size={40} color="#2196F3" style={iconStyles} />;
       case "icon8":
         return <TfiText size={40} color="#2196F3" style={iconStyles} />;
-
       case "icon9":
         return <TbBulb size={40} color="#2196F3" style={iconStyles} />;
       default:

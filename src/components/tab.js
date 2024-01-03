@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './tab.css';
 
 const Card = ({ title, content }) => (
   <div
@@ -109,6 +108,7 @@ const App = () => {
         { title: ".SEA", content: "<b> $26.33 y/r </b> Instead of $10.99 y/r" },
       ],
     },
+
     {
       title: "Web Hosting",
     },
