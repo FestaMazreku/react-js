@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import './tab.css';
 
-const Card = ({ title, content }) => (
+const ResponsiveCard = ({ title, content }) => (
   <div
     style={{
-      border: "0px solid #ddd",
+      border: "1px solid #ddd",
       padding: "16px",
-      margin: "16px",
+      margin: "8px", 
       borderRadius: "8px",
       textAlign: "center",
       background: "white",
+      width: "calc(25% - 16px)", 
+      boxSizing: "border-box",
+      flex: "0 0 calc(25% - 16px)",
     }}
   >
     <h3>{title}</h3>
@@ -20,7 +24,7 @@ const Card = ({ title, content }) => (
     <button
       style={{
         marginTop: "10px",
-        padding: "10px 75px",
+        padding: "10px 30px", 
         border: "1px solid #3E8EDE",
         borderRadius: "6px",
         background: "white",
@@ -45,40 +49,23 @@ const TabsComponent = ({ tabData }) => {
 
   return (
     <div style={{ textAlign: "center", background: "#f4f4f4" }}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "16px",
-          background: "#f4f4f4",
-        }}
-      >
+      <div className="tabs-container">
         {tabData.map((tab, index) => (
           <div
             key={index}
             onClick={() => setSelectedTab(index)}
-            style={{
-              padding: "8px",
-              borderBottom:
-              selectedTab === index ? "2px solid blue" : "1px solid white",
-              marginRight: "15px",
-              backgroundColor: selectedTab === index ? "white" : "#f4f4f4", 
-
-              color: selectedTab === index ? "black" : "inherit",
-            }}
+            className={`tab ${selectedTab === index ? "active" : ""}`}
           >
             {tab.title}
           </div>
         ))}
       </div>
 
-      <div
-        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-      >
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {rowsOfCards.map((row, rowIndex) => (
           <div key={rowIndex} style={{ display: "flex", marginBottom: "16px" }}>
             {row.map((card, cardIndex) => (
-              <Card key={cardIndex} title={card.title} content={card.content} />
+              <ResponsiveCard key={cardIndex} title={card.title} content={card.content} />
             ))}
           </div>
         ))}
