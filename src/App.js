@@ -3,6 +3,7 @@ import Component from "./components/component";
 import Card from "./components/card";
 import Tab from "./components/tab";
 import ToggleText from "./components/usestate";
+import Toggle from "./components/usestate2";
 
 function App() {
   const cardData = [
@@ -98,8 +99,8 @@ function App() {
       </div>
       <Tab />
       <ToggleText />
-      <br>
-      </br>
+      <Toggle />
+      <br></br>
     </div>
   );
 }
