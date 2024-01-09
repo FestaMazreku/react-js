@@ -1,4 +1,4 @@
-.toggle-container {
+.toggle-container1 {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -13,21 +13,14 @@
     background-color: #fff;
 }
   
-.arrow {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8px 5px 0 5px;
-    border-color: #000000 transparent transparent transparent;
-    margin-left: 10px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
+.arrow-icon {
+    margin-left: auto; 
+    cursor: pointer;
+    font-size: 24px;
+    color: #2e2e2e; 
 }
-  
-.toggle-container.open .arrow {
+
+.toggle-container.open .arrow-icon {
     transform: translateY(-50%) rotate(180deg);
 }
   
@@ -57,11 +50,11 @@
 .second-text hr {
     width: 100%;
     margin: 10px 0; 
-    border: 1px solid #ccc; 
+    border: 1px solid #ece9e9; 
 }
   
 .second-text .smaller-text {
-    font-size: 12px;
+    font-size: 14px;
     color: #666; 
     margin: 10px 0; 
 }

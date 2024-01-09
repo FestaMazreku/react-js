@@ -99,6 +99,7 @@ function App() {
       </div>
       <Tab />
       <ToggleText />
+      <br></br>
       <Toggle />
       <br></br>
     </div>
