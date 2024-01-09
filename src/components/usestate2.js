@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import "./usestate.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import "./usestate2.css";
 
 const ToggleText = () => {
   const initialRows = [
     {
       title: "About Us",
       text: "Learn more about our company and mission.",
+      additionalText: "4 articles in this Topic",
     },
     {
       title: "How does Parkname separate itself from other domain name parking companies?",
-      text: "Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portofolio.",
-    },
-    {
-      title: "Is Parkname actually free?",
-      text: ".",
+      text: "Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.",
     },
     {
       title: "Is Parkname actually free?",
@@ -49,14 +47,26 @@ const ToggleText = () => {
           onClick={() => handleRowClick(index)}
         >
           <div className="text-container">
-            <p>{row.title}</p>
+            <div className="title-container">
+              {row.title === "About Us" && <CgProfile className="icon" />} 
+              <p>{row.title}</p>
+            </div>
             <div className={`second-text ${row.isOpen ? "show" : ""}`}>
               <hr />
-              <p className="smaller-text">{row.text}</p>
-              <br />
+              <div className="text-content">
+                <p className="smaller-text">{row.text}</p>
+                <br />
+              </div>
+            </div>
+            {row.title === "About Us" && (
+              <div className="additional-text">
+                <p className="smaller-grey-text">{row.additionalText}</p>
+              </div>
+            )}
+            <div className="right-arrow-container">
+              <MdKeyboardArrowDown className="arrow-icon" />
             </div>
           </div>
-          <MdKeyboardArrowDown className="arrow-icon" />
         </div>
       ))}
     </div>

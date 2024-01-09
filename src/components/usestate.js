@@ -11,9 +11,9 @@ const ToggleText = () => {
 
   return (
     <div
-      className={`toggle-container1 ${showSecondText ? "open" : ""}`}
-      onClick={handleClick}
-    >
+    className={`toggle-container ${showSecondText ? "open" : ""}`}
+    onClick={handleClick}
+  >
       <div className="text-container">
         <p>Why park a domain name in Parkname ?</p>
         <div className={`second-text ${showSecondText ? "show" : ""}`}>

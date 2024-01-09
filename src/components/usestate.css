@@ -1,4 +1,4 @@
-.toggle-container1 {
+.toggle-container {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -6,23 +6,24 @@
     padding: 10px;
     border-radius: 5px;
     position: relative;
-    transition: background-color 0.3s ease-in-out; 
-  }
+    transition: background-color 0.3s ease-in-out;
+}
   
 .toggle-container.open {
     background-color: #fff;
 }
   
 .arrow-icon {
-    margin-left: auto; 
+    margin-left: auto;
     cursor: pointer;
-    font-size: 24px;
-    color: #2e2e2e; 
+    font-size: 20px;
+    color: #2e2e2e;
+    border-width: 0 1px 1px 0;
 }
-
+  
 .toggle-container.open .arrow-icon {
     transform: translateY(-50%) rotate(180deg);
-}
+}  
   
 .text-container {
     transition: max-height 0.3s ease-in-out;
