@@ -7,7 +7,6 @@ const ToggleText = () => {
   const initialRows = [
     {
       title: "About Us",
-      text: "Learn more about our company and mission.",
       additionalText: "4 articles in this Topic",
     },
     {

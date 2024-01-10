@@ -4,6 +4,7 @@ import Card from "./components/card";
 import Tab from "./components/tab";
 import ToggleText from "./components/usestate";
 import Toggle from "./components/usestate2";
+import Popup from "./components/Popup";
 
 function App() {
   const cardData = [
@@ -102,6 +103,7 @@ function App() {
       <br></br>
       <Toggle />
       <br></br>
+      <Popup />
     </div>
   );
 }
