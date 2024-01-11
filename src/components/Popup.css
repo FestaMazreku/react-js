@@ -1,0 +1,64 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+  
+.button-container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.cancel-btn,
+.save-btn {
+    padding: 8px;
+    margin-left: 8px;
+    background-color: #f8f8f8;
+    border: 1px solid rgb(187, 186, 186);
+    cursor: pointer;
+    border-radius: 5px;
+    width: 12%;
+}
+  
+.save-btn {
+    background-color: #0a6cec;
+    color: #fff;
+}
+  
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.text-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-right {
+    display: flex;
+    flex-direction: column;
+}
+  
+.color {
+    width: 30px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-top: 8px;
+}

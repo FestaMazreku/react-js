@@ -5,6 +5,7 @@ import Tab from "./components/tab";
 import ToggleText from "./components/usestate";
 import Toggle from "./components/usestate2";
 import Popup from "./components/Popup";
+import { useState } from "react";
 
 function App() {
   const cardData = [
@@ -90,6 +91,8 @@ function App() {
     },
   ];
 
+  const [buttonPopup, setButtonPopup] = useState(false);
+
   return (
     <div className="App">
       <Component />
@@ -103,7 +106,28 @@ function App() {
       <br></br>
       <Toggle />
       <br></br>
-      <Popup />
+      <br></br>
+      <button
+        style={{
+          backgroundColor: "gray",
+          color: "white",
+          width: "10%",
+          border: "none",
+          height: "30px",
+          marginRight: "10px",
+        }}
+        onClick={() => setButtonPopup(true)}
+      >
+        Show popup
+      </button>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <h3>Theme Color</h3>
+        <p> Font Color </p>
+        <p> Background Color </p>
+        <p> Button Color </p>
+        <p> Button Border Color </p>
+        <p> Button Mouseover Color </p>
+      </Popup>
     </div>
   );
 }
