@@ -1,7 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Popup.css";
 
 function Popup(props) {
+  const [fontColor, setFontColor] = useState("#444444");
+  const [backgroundColor, setBackgroundColor] = useState("#FFFFFF");
+  const [buttonColor, setButtonColor] = useState("#2072EF");
+
   useEffect(() => {
     const closeOnBackdropClick = (event) => {
       if (event.target.classList.contains("popup")) {
@@ -31,17 +35,52 @@ function Popup(props) {
           </div>
           <div className="color-right">
             <p style={{ color: "blue" }}> Change Theme </p>
+
             <br></br>
             <br></br>
-            <div className="color" style={{ backgroundColor: "#444444" }}></div>
+            <div className="color-right">
+              <input
+                type="color"
+                value={fontColor}
+                onChange={(e) => setFontColor(e.target.value)}
+              />
+            </div>
+
             <br></br>
-            <div className="color" style={{ backgroundColor: "#FFFFFF" }}></div>
+            <div className="color-right">
+              <input
+                type="color"
+                value={backgroundColor}
+                onChange={(e) => setBackgroundColor(e.target.value)}
+              />
+            </div>
+
             <br></br>
-            <div className="color" style={{ backgroundColor: "#2072EF" }}></div>
+            <div className="color-right">
+              <input
+                type="color"
+                value={buttonColor}
+                onChange={(e) => setButtonColor(e.target.value)}
+              />
+            </div>
+
             <br></br>
-            <div className="color" style={{ backgroundColor: "#2072EF" }}></div>
+            <div className="color-right">
+              <input
+                type="color"
+                value={buttonColor}
+                onChange={(e) => setButtonColor(e.target.value)}
+              />
+            </div>
+
             <br></br>
-            <div className="color" style={{ backgroundColor: "#0053D1" }}></div>
+            <div className="color-right">
+              <input
+                type="color"
+                value={buttonColor}
+                onChange={(e) => setButtonColor(e.target.value)}
+              />
+            </div>
           </div>
         </div>
         <div className="button-container">
