@@ -25,64 +25,78 @@ function Popup(props) {
       <div className="popup-inner">
         <div className="content-container">
           <div className="text-left">
-            <h3> Theme color </h3>
-            <br></br>
+            <h3>Theme color</h3>
+            <br />
             <p>Font Color</p>
+            <div className="separator"></div>
             <p>Background Color</p>
+            <div className="separator"></div>
             <p>Button Color</p>
+            <div className="separator"></div>
             <p>Button Border Color</p>
+            <div className="separator"></div>
             <p>Button Mouseover Color</p>
+            <div className="separator"></div>
           </div>
-          <div className="color-right">
-            <p style={{ color: "blue" }}> Change Theme </p>
 
-            <br></br>
-            <br></br>
+          <div class="container">
             <div className="color-right">
-              <input
-                type="color"
-                value={fontColor}
-                onChange={(e) => setFontColor(e.target.value)}
-              />
-            </div>
+              <p style={{ color: "blue" }}>Change Theme</p>
 
-            <br></br>
-            <div className="color-right">
-              <input
-                type="color"
-                value={backgroundColor}
-                onChange={(e) => setBackgroundColor(e.target.value)}
-              />
-            </div>
+              <br />
+              <br />
+              <br />
+              <div className="color-right">
+                <div
+                  className="color-box"
+                  style={{ backgroundColor: fontColor }}
+                ></div>
+                <input
+                  type="color"
+                  value={fontColor}
+                  onChange={(e) => setFontColor(e.target.value)}
+                />
+              </div>
 
-            <br></br>
-            <div className="color-right">
-              <input
-                type="color"
-                value={buttonColor}
-                onChange={(e) => setButtonColor(e.target.value)}
-              />
-            </div>
+              <br />
+              <div className="color-right">
+                <input
+                  type="color"
+                  value={backgroundColor}
+                  onChange={(e) => setBackgroundColor(e.target.value)}
+                />
+              </div>
 
-            <br></br>
-            <div className="color-right">
-              <input
-                type="color"
-                value={buttonColor}
-                onChange={(e) => setButtonColor(e.target.value)}
-              />
-            </div>
+              <br />
+              <div className="color-right">
+                <input
+                  type="color"
+                  value={buttonColor}
+                  onChange={(e) => setButtonColor(e.target.value)}
+                />
+              </div>
 
-            <br></br>
-            <div className="color-right">
-              <input
-                type="color"
-                value={buttonColor}
-                onChange={(e) => setButtonColor(e.target.value)}
-              />
+              <br />
+              <div className="color-right">
+                <input
+                  type="color"
+                  value={buttonColor}
+                  onChange={(e) => setButtonColor(e.target.value)}
+                />
+              </div>
+
+              <br />
+              <div className="color-right">
+                <input
+                  type="color"
+                  value={buttonColor}
+                  onChange={(e) => setButtonColor(e.target.value)}
+                />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="button-container">
           <button
             className="cancel-btn"
