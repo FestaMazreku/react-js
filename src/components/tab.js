@@ -40,9 +40,9 @@ const TabsComponent = ({ tabData }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   const chunkArray = (arr, size) => {
-    return Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+    return arr ? Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
       arr.slice(i * size, i * size + size)
-    );
+    ) : [];
   };
 
   const rowsOfCards = chunkArray(tabData[selectedTab].cards, 4);

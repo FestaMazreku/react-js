@@ -106,7 +106,6 @@ function App() {
       <br></br>
       <Toggle />
       <br></br>
-      <br></br>
       <button
         style={{
           backgroundColor: "gray",
@@ -115,11 +114,14 @@ function App() {
           border: "none",
           height: "30px",
           marginRight: "10px",
+          marginLeft: "30px"
         }}
         onClick={() => setButtonPopup(true)}
       >
         Show popup
       </button>
+      <br></br>
+      <br></br>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h3>Theme Color</h3>
         <p> Font Color </p>
