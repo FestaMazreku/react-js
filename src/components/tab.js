@@ -1,38 +1,17 @@
 import React, { useState } from "react";
-import './tab.css';
+import "./tab.css";
 
 const ResponsiveCard = ({ title, content }) => (
-  <div
-    style={{
-      border: "1px solid #ddd",
-      padding: "16px",
-      margin: "8px", 
-      borderRadius: "8px",
-      textAlign: "center",
-      background: "white",
-      width: "calc(25% - 16px)", 
-      boxSizing: "border-box",
-      flex: "0 0 calc(25% - 16px)",
-    }}
-  >
-    <h3>{title}</h3>
-    <p
-      dangerouslySetInnerHTML={{
-        __html: content.replace("Instead of", "<br> Instead of"),
-      }}
-    />
-    <button
-      style={{
-        marginTop: "10px",
-        padding: "10px 30px", 
-        border: "1px solid #3E8EDE",
-        borderRadius: "6px",
-        background: "white",
-        color: "#3E8EDE",
-      }}
-    >
-      Buy Now
-    </button>
+  <div className="responsivecard">
+    <div>
+      <h3>{title}</h3>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: content.replace("Instead of", "<br> Instead of"),
+        }}
+      />
+      <button className="button">Buy Now</button>
+    </div>
   </div>
 );
 
@@ -40,9 +19,11 @@ const TabsComponent = ({ tabData }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   const chunkArray = (arr, size) => {
-    return arr ? Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-      arr.slice(i * size, i * size + size)
-    ) : [];
+    return arr
+      ? Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+          arr.slice(i * size, i * size + size)
+        )
+      : [];
   };
 
   const rowsOfCards = chunkArray(tabData[selectedTab].cards, 4);
@@ -61,11 +42,17 @@ const TabsComponent = ({ tabData }) => {
         ))}
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {rowsOfCards.map((row, rowIndex) => (
           <div key={rowIndex} style={{ display: "flex", marginBottom: "16px" }}>
             {row.map((card, cardIndex) => (
-              <ResponsiveCard key={cardIndex} title={card.title} content={card.content} />
+              <ResponsiveCard
+                key={cardIndex}
+                title={card.title}
+                content={card.content}
+              />
             ))}
           </div>
         ))}
