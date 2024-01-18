@@ -15,15 +15,15 @@ const ToggleText = () => {
     },
     {
       title: "Is Parkname actually free?",
-      text: ".",
+      text: "",
     },
     {
       title: "What you do?",
-      text: ".",
+      text: "",
     },
     {
       title: "When was Parkname first founded?",
-      text: ".",
+      text: "",
     },
   ];
 
@@ -36,7 +36,7 @@ const ToggleText = () => {
       )
     );
   };
-
+  
   return (
     <div>
       {rows.map((row, index) => (

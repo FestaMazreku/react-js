@@ -8,10 +8,74 @@
 .card {
   flex: 0 0 calc(33.33% - 20px);
   margin: 10px;
-  padding: 15px;
+  padding: 10px;
   background-color: #ffffff;
-  text-align: center;
   box-sizing: border-box;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+}
+
+.containerStyle {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.title {
+    flex: 1;
+}
+
+.downloadButton {
+    padding: 15px 60px;
+    background-color: white;
+    color: #2C3FFF;
+    border-radius: 18px;
+    border: 1px solid #2C3FFF;
+    cursor: pointer;
+    margin: 50px 5px 5px;
+}
+
+.button1 {
+    padding: 10px 30px;
+    background-color: #03C03C;
+    color: white;
+    border-radius: 8px;
+    border: 1px #03C03C;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.button2 {
+  padding: 7px 40px;
+  background-color: #2549EE;
+  color: white;
+  border-radius: 8px;
+  border: 1px #2549EE;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button3 {
+  padding: 7px 40px;
+  background-color: #D93EFF;
+  color: white;
+  border-radius: 8px;
+  border: 1px #D93EFF;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.p {
+  color: #B8B8B8;
+  white-space: pre-line;
 }
 
 @media only screen and (max-width: 1024px) {

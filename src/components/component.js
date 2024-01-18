@@ -11,8 +11,7 @@ const Component = () => {
     {
       text: "The TLD",
       icon: "icon1",
-      description:
-        "Does the domain extension match the language of the domain name?",
+      description: "Does the domain extension match the language of the domain name?",
     },
 
     {

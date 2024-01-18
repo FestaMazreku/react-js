@@ -41,6 +41,12 @@
   color: #3E8EDE;
 }
   
+
+.background {
+  text-align: center;
+  background: #f4f4f4;
+}
+
 @media only screen and (max-width: 1024px) {
     .tabs-container {
       flex-direction: column;

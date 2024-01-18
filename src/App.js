@@ -12,7 +12,7 @@ function App() {
     {
       date: "3.3.0 (14/05/2018)",
       button: "New",
-      image: "./images/image1.jpg",
+      image: "./public/assets/images/image1.jpg",
       title: "Kevin Joe",
       body: "File system changed from Dokan to CBFS Host <br> Cloud Drive is now a network drive Various bug fixes <br> and stability improvements Share <br> permissions re-design and optimization <br> <br> <br>",
       buttonText: "Download",
@@ -107,15 +107,7 @@ function App() {
       <Toggle />
       <br></br>
       <button
-        style={{
-          backgroundColor: "gray",
-          color: "white",
-          width: "10%",
-          border: "none",
-          height: "30px",
-          marginRight: "10px",
-          marginLeft: "30px"
-        }}
+      className="buttonPopup"
         onClick={() => setButtonPopup(true)}
       >
         Show popup

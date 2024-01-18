@@ -17,7 +17,6 @@ const ResponsiveCard = ({ title, content }) => (
 
 const TabsComponent = ({ tabData }) => {
   const [selectedTab, setSelectedTab] = useState(0);
-
   const chunkArray = (arr, size) => {
     return arr
       ? Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
@@ -29,7 +28,7 @@ const TabsComponent = ({ tabData }) => {
   const rowsOfCards = chunkArray(tabData[selectedTab].cards, 4);
 
   return (
-    <div style={{ textAlign: "center", background: "#f4f4f4" }}>
+    <div className="background">
       <div className="tabs-container">
         {tabData.map((tab, index) => (
           <div

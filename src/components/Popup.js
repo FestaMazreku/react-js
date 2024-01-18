@@ -41,13 +41,12 @@ function Popup(props) {
 
           <div class="container">
             <div className="color-right">
-              <p style={{ color: "blue" }}>Change Theme</p>
+              <p className="theme">Change Theme</p>
               <br />
               <br />
               <br />
               <div className="color-right">
                 <div
-                  className="color-box"
                   style={{ backgroundColor: fontColor }}
                 ></div>
                 <input
