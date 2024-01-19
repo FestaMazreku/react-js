@@ -40,11 +40,15 @@
   background-color: white;
   color: #3E8EDE;
 }
-  
 
 .background {
   text-align: center;
   background: #f4f4f4;
+}
+
+.hexColor {
+  text-align: left;
+  padding-right: 40px;
 }
 
 @media only screen and (max-width: 1024px) {

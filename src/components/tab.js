@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./tab.css";
+import "./stylesheet/tab.css";
 
 const ResponsiveCard = ({ title, content }) => (
   <div className="responsivecard">
@@ -23,7 +23,7 @@ const TabsComponent = ({ tabData }) => {
           arr.slice(i * size, i * size + size)
         )
       : [];
-  };
+};
 
   const rowsOfCards = chunkArray(tabData[selectedTab].cards, 4);
 

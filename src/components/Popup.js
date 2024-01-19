@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./Popup.css";
+import "./stylesheet/Popup.css";
 
 function Popup(props) {
-  const [fontColor, setFontColor] = useState("#444444");
+  const [grayColor, setGrayColor] = useState("#444444");
   const [backgroundColor, setBackgroundColor] = useState("#FFFFFF");
-  const [buttonColor, setButtonColor] = useState("#2072EF");
+  const [blueColor, setBlueColor] = useState("#2072EF");
+  const [darkBlueColor, setDarkBlueColor] = useState("#0053D1");
 
   useEffect(() => {
     const closeOnBackdropClick = (event) => {
@@ -42,54 +43,65 @@ function Popup(props) {
           <div class="container">
             <div className="color-right">
               <p className="theme">Change Theme</p>
-              <br />
-              <br />
-              <br />
+
               <div className="color-right">
-                <div
-                  style={{ backgroundColor: fontColor }}
-                ></div>
-                <input
-                  type="color"
-                  value={fontColor}
-                  onChange={(e) => setFontColor(e.target.value)}
-                />
+                <p className="hexColor">
+                  {" "}
+                  #444444
+                  <input
+                    type="color"
+                    value={grayColor}
+                    onChange={(e) => setGrayColor(e.target.value)}
+                  />
+                </p>
               </div>
 
-              <br />
               <div className="color-right">
-                <input
-                  type="color"
-                  value={backgroundColor}
-                  onChange={(e) => setBackgroundColor(e.target.value)}
-                />
+                <p className="hexColor">
+                  {" "}
+                  #FFFFFF
+                  <input
+                    type="color"
+                    value={backgroundColor}
+                    onChange={(e) => setBackgroundColor(e.target.value)}
+                  />
+                </p>
               </div>
 
-              <br />
               <div className="color-right">
-                <input
-                  type="color"
-                  value={buttonColor}
-                  onChange={(e) => setButtonColor(e.target.value)}
-                />
+                <p className="hexColor">
+                  {" "}
+                  #2072EF
+                  <input
+                    type="color"
+                    value={blueColor}
+                    onChange={(e) => setBlueColor(e.target.value)}
+                  />
+                </p>
               </div>
 
-              <br />
               <div className="color-right">
-                <input
-                  type="color"
-                  value={buttonColor}
-                  onChange={(e) => setButtonColor(e.target.value)}
-                />
+                <p className="hexColor">
+                  {" "}
+                  #2072EF
+                  <input
+                    type="color"
+                    value={blueColor}
+                    onChange={(e) => setBlueColor(e.target.value)}
+                  />
+                </p>
               </div>
 
-              <br />
               <div className="color-right">
-                <input
-                  type="color"
-                  value={buttonColor}
-                  onChange={(e) => setButtonColor(e.target.value)}
-                />
+                <p className="hexColor">
+                  {" "}
+                  #0053D1
+                  <input
+                    type="color"
+                    value={darkBlueColor}
+                    onChange={(e) => setDarkBlueColor(e.target.value)}
+                  />
+                </p>
               </div>
             </div>
           </div>

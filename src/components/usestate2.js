@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-import "./usestate2.css";
+import "./stylesheet/usestate2.css";
 
 const ToggleText = () => {
   const initialRows = [

@@ -5,6 +5,7 @@ import { BsGlobe, BsMegaphone } from "react-icons/bs";
 import { IoRibbonOutline } from "react-icons/io5";
 import { LuBadgePercent } from "react-icons/lu";
 import { TbBulb } from "react-icons/tb";
+import "./stylesheet/component.css";
 
 const Component = () => {
   const data = [

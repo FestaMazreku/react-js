@@ -1,4 +1,3 @@
-import "./App.css";
 import Component from "./components/component";
 import Card from "./components/card";
 import Tab from "./components/tab";
@@ -6,6 +5,7 @@ import ToggleText from "./components/usestate";
 import Toggle from "./components/usestate2";
 import Popup from "./components/Popup";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const cardData = [

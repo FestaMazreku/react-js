@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.css";
+import "./stylesheet/card.css";
 
 const Card = ({ date, title, body, buttonText, button, button2, button3 }) => {
   const formattedBody = { __html: body.replace(/\n/g, "<br>") };

@@ -27,23 +27,29 @@
   
 .cancel-btn,
 .save-btn {
-    padding: 8px;
+    padding: 10px 17px; 
     margin-left: 8px;
-    background-color: #f8f8f8;
-    border: 1px solid rgb(187, 186, 186);
     cursor: pointer;
     border-radius: 5px;
-    width: 12%;
+    width: auto; 
 }
-  
+
+.cancel-btn {
+    background-color: #f8f8f8;
+    border: 1px solid rgb(187, 186, 186);
+    color: #444; 
+}
+
 .save-btn {
     background-color: #0a6cec;
     color: #fff;
+    border: none;
 }
 
 .separator {
     border-top: 1px solid #ccc;
-    width: 520px;
+    width: 200%; 
+    margin: 16px 0; 
 }  
 
 .content-container {
@@ -51,31 +57,37 @@
     justify-content: space-between;
 }
   
-.text-left {
-    display: flex;
-    flex-direction: column;
+.text-left,
+.color-right {
+    flex-basis: 48%;
 }
 
 .color-right {
-    display: flex;
-    flex-direction: column;
+    margin: 30px;
+    margin-right: auto;
 }
 
 .color-right input[type="color"] {
     border: none;
-    width: 50px;
+    width: 55px;
     height: 30px;
     background-color: white;
+    border-radius: 5px;
 }
 
 .theme {
     color: blue;
 }
-  
-@media (min-width: 480px) and (max-width: 768px) {
-    .text-left,
-    .color-right {
-        flex-basis: 48%;
+
+@media (max-width: 1024px) {
+    .separator {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .separator {
+        max-width: 100%;
     }
 }
 
@@ -84,17 +96,5 @@
     .save-btn {
         width: 100%;
         margin: 8px 0;
-    }
-}
-
-@media (max-width: 1024px) {
-    .separator {
-        max-width: 480px;
-    }
-}
-
-@media (max-width: 768px) {
-    .separator {
-        max-width: 360px;
     }
 }
