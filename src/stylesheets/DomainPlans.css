@@ -23,9 +23,6 @@
 }
   
 .responsivecard {
-  border: 0px solid #ddd;
-  padding: 20px;
-  border-radius: 6px;
   text-align: center;
   background-color: white;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

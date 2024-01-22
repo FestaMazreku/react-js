@@ -5,59 +5,69 @@ import { BsGlobe, BsMegaphone } from "react-icons/bs";
 import { IoRibbonOutline } from "react-icons/io5";
 import { LuBadgePercent } from "react-icons/lu";
 import { TbBulb } from "react-icons/tb";
-import "./stylesheet/component.css";
+import "../stylesheets/IconContainerView.css";
 
-const Component = () => {
+const IconContainer = () => {
   const data = [
     {
+      id: 1,
       text: "The TLD",
       icon: "icon1",
-      description: "Does the domain extension match the language of the domain name?",
+      description:
+        "Does the domain extension match the language of the domain name?",
     },
 
     {
+      id: 2,
       text: "Domain Length",
       icon: "icon2",
       description: "Is the domain short enough to remember?",
     },
 
     {
+      id: 3,
       text: "Language",
       icon: "icon3",
       description: "How complex is the actual domain name?",
     },
 
     {
+      id: 4,
       text: "International recognition",
       icon: "icon4",
       description: "Can the domain name be used on an international scale?",
     },
 
     {
+      id: 5,
       text: "Search engine",
       icon: "icon5",
       description: "Does the domain follow search engine guidelines?",
     },
 
     {
+      id: 6,
       text: "Advertising Potential",
       icon: "icon6",
       description: "Could the domain be used for advertising campaigns?",
     },
 
     {
+      id: 7,
       text: "Sales Opportunities",
       icon: "icon7",
       description: "Can the domain name be used on an international scale?",
     },
 
     {
+      id: 8,
       text: "Typo susceptibility",
       icon: "icon8",
       description: "How high is the risk of mistyping the domain name?",
     },
 
     {
+      id: 9,
       text: "Business potential",
       icon: "icon9",
       description: "Can the domain be used as your company address?",
@@ -140,4 +150,4 @@ const Component = () => {
   );
 };
 
-export default Component;
+export default IconContainer;

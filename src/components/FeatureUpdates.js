@@ -1,7 +1,7 @@
 import React from "react";
-import "./stylesheet/card.css";
+import "../stylesheets/FeatureUpdates.css";
 
-const Card = ({ date, title, body, buttonText, button, button2, button3 }) => {
+const FeatureUpdates = ({ date, title, body, buttonText, button, button2, button3 }) => {
   const formattedBody = { __html: body.replace(/\n/g, "<br>") };
 
   return (
@@ -14,13 +14,10 @@ const Card = ({ date, title, body, buttonText, button, button2, button3 }) => {
         <img src="./images/image1.jpg" alt="Card" className="image" />
         <h2 className="title">{title}</h2>
       </div>
-      <p
-        className="p"
-        dangerouslySetInnerHTML={formattedBody}
-      />
+      <p className="p" dangerouslySetInnerHTML={formattedBody} />
       <button className="downloadButton">{buttonText}</button>
     </div>
   );
 };
 
-export default Card;
+export default FeatureUpdates;

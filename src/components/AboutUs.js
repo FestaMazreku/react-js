@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-import "./stylesheet/usestate2.css";
+import "../stylesheets/AboutUs.css";
 
-const ToggleText = () => {
+const AboutUs = () => {
   const initialRows = [
     {
       title: "About Us",
       additionalText: "4 articles in this Topic",
     },
     {
-      title: "How does Parkname separate itself from other domain name parking companies?",
+      title:
+        "How does Parkname separate itself from other domain name parking companies?",
       text: "Your domains are a valuable online property. As in any investment, you want the most efficient, easy way to make sure your property is going to be profitable. Do you own more than 1,000 domains? As a professional domainer, you will find everything you need through Parkname to generate maximum profits from your domain portfolio.",
     },
     {
@@ -36,7 +37,7 @@ const ToggleText = () => {
       )
     );
   };
-  
+
   return (
     <div>
       {rows.map((row, index) => (
@@ -47,15 +48,8 @@ const ToggleText = () => {
         >
           <div className="text-container">
             <div className="title-container">
-              {row.title === "About Us" && <CgProfile className="icon" />} 
+              {row.title === "About Us" && <CgProfile className="icon" />}
               <p>{row.title}</p>
-            </div>
-            <div className={`second-text ${row.isOpen ? "show" : ""}`}>
-              <hr />
-              <div className="text-content">
-                <p className="smaller-text">{row.text}</p>
-                <br />
-              </div>
             </div>
             {row.title === "About Us" && (
               <div className="additional-text">
@@ -65,6 +59,19 @@ const ToggleText = () => {
             <div className="right-arrow-container">
               <MdKeyboardArrowDown className="arrow-icon" />
             </div>
+            {row.isOpen ? (
+              <div className={`second-text ${row.isOpen ? "show" : ""}`}>
+                <hr />
+                <div className="text-content">
+                  <p className="smaller-text">{row.text}</p>
+                  <br />
+                </div>
+              </div>
+            ) : (
+              <div>
+                <br />
+              </div>
+            )}
           </div>
         </div>
       ))}
@@ -72,4 +79,4 @@ const ToggleText = () => {
   );
 };
 
-export default ToggleText;
+export default AboutUs;

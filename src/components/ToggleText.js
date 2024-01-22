@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import "./stylesheet/usestate.css";
+import "../stylesheets/ToggleText.css";
 
 const ToggleText = () => {
   const [showSecondText, setShowSecondText] = useState(false);
@@ -11,14 +11,14 @@ const ToggleText = () => {
 
   return (
     <div
-    className={`toggle-container ${showSecondText ? "open" : ""}`}
-    onClick={handleClick}
-  >
+      className={`toggle-container ${showSecondText ? "open" : ""}`}
+      onClick={handleClick}
+    >
       <div className="text-container">
         <p>Why park a domain name in Parkname ?</p>
         <div className={`second-text ${showSecondText ? "show" : ""}`}>
           <hr />
-          
+
           <p className="smaller-text">
             Parkname is the leading industry standard for domain name parking
             and monetization services. We offer a wide variety of services to

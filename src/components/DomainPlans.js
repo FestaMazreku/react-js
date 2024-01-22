@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./stylesheet/tab.css";
+import "../stylesheets/DomainPlans.css";
 
 const ResponsiveCard = ({ title, content }) => (
   <div className="responsivecard">
-    <div>
+    <div style={{ padding: "15px" }}>
       <h3>{title}</h3>
       <p
         dangerouslySetInnerHTML={{
@@ -23,9 +23,9 @@ const TabsComponent = ({ tabData }) => {
           arr.slice(i * size, i * size + size)
         )
       : [];
-};
+  };
 
-  const rowsOfCards = chunkArray(tabData[selectedTab].cards, 4);
+  const rowsOfCards = chunkArray(tabData[selectedTab].cards, 2);
 
   return (
     <div className="background">
@@ -60,7 +60,7 @@ const TabsComponent = ({ tabData }) => {
   );
 };
 
-const App = () => {
+const DomainPlans = () => {
   const tabsData = [
     {
       title: "Domains",
@@ -112,4 +112,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default DomainPlans;

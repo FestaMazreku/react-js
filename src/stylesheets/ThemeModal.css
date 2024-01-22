@@ -10,8 +10,11 @@
 }
   
 .popup-inner {
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    border-radius: 6px;
     position: relative;
-    padding: 32px;
+    padding: 20px;
     width: 100%;
     max-width: 640px;
     background-color: #fff;
@@ -65,6 +68,7 @@
 .color-right {
     margin: 30px;
     margin-right: auto;
+    border-radius: 5px;
 }
 
 .color-right input[type="color"] {
@@ -72,11 +76,16 @@
     width: 55px;
     height: 30px;
     background-color: white;
-    border-radius: 5px;
 }
 
 .theme {
-    color: blue;
+    color: #0a6cec;
+    margin: 30px;
+}
+
+.hexColor {
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (max-width: 1024px) {

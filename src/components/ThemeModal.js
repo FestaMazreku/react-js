@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./stylesheet/Popup.css";
+import "../stylesheets/ThemeModal.css";
 
-function Popup(props) {
+function ThemeModal(props) {
   const [grayColor, setGrayColor] = useState("#444444");
   const [backgroundColor, setBackgroundColor] = useState("#FFFFFF");
   const [blueColor, setBlueColor] = useState("#2072EF");
@@ -26,7 +26,7 @@ function Popup(props) {
       <div className="popup-inner">
         <div className="content-container">
           <div className="text-left">
-            <h3>Theme color</h3>
+            <h3>Theme Color</h3>
             <br />
             <p>Font Color</p>
             <div className="separator"></div>
@@ -43,7 +43,6 @@ function Popup(props) {
           <div class="container">
             <div className="color-right">
               <p className="theme">Change Theme</p>
-
               <div className="color-right">
                 <p className="hexColor">
                   {" "}
@@ -121,4 +120,4 @@ function Popup(props) {
   ) : null;
 }
 
-export default Popup;
+export default ThemeModal;
