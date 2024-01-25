@@ -8,6 +8,7 @@ const AboutUs = () => {
     {
       id: 1,
       title: "About Us",
+      text: "4 articles in this Topic",
       isOpen: false,
       articles: [
         {
@@ -55,17 +56,22 @@ const AboutUs = () => {
             className="title-container"
             onClick={() => toggleTopic(topic.id)}
           >
-            <span className="toggle-icon">
+            <div className="title-container">
+              {topic.title === "About Us" && (
+                <CgProfile className="profile-icon" />
+              )}
+              <p>{topic.title}</p>
+            </div>
+            <br />
+            <p className="text">{topic.text}</p>
+
+            <div className="arrow-icon">
               {topic.isOpen ? (
                 <MdKeyboardArrowDown />
               ) : (
                 <MdKeyboardArrowRight />
               )}
-            </span>
-            <span className="profile-icon">
-              <CgProfile />
-            </span>
-            <span className="topic-title">{topic.title}</span>
+            </div>
           </div>
           {topic.isOpen && (
             <div className="article-container">
@@ -75,13 +81,13 @@ const AboutUs = () => {
                   className="article-item"
                   onClick={() => toggleArticle(topic.id, article.id)}
                 >
-                  <span className="toggle-icon">
+                  <div className="arrow-icon">
                     {article.isOpen ? (
                       <MdKeyboardArrowDown />
                     ) : (
                       <MdKeyboardArrowRight />
                     )}
-                  </span>
+                  </div>
                   <span className="article-text">{article.text}</span>
                   {article.isOpen && (
                     <div className="article-content">
