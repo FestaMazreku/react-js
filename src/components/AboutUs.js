@@ -16,7 +16,7 @@ const AboutUs = () => {
           text: "How does Parkname separate itself from other domain name parking companies?",
           isOpen: false,
         },
-        { id: 2, text: "Is Parkname actually free?", isOpen: false },
+        { id: 2, text: "Is Parkname Parking actually free?", isOpen: false },
         { id: 3, text: "What you do?", isOpen: false },
         { id: 4, text: "When was Parkname first founded?", isOpen: false },
       ],
@@ -56,15 +56,11 @@ const AboutUs = () => {
             className="title-container"
             onClick={() => toggleTopic(topic.id)}
           >
-            <div className="title-container">
-              {topic.title === "About Us" && (
-                <CgProfile className="profile-icon" />
-              )}
-              <p>{topic.title}</p>
+            <CgProfile className="profile-icon" />
+            <div className="title-content">
+              <p className="topic-title">{topic.title}</p>
+              <p className="text">{topic.text}</p>
             </div>
-            <br />
-            <p className="text">{topic.text}</p>
-
             <div className="arrow-icon">
               {topic.isOpen ? (
                 <MdKeyboardArrowDown />
@@ -73,33 +69,38 @@ const AboutUs = () => {
               )}
             </div>
           </div>
+
           {topic.isOpen && (
             <div className="article-container">
               {topic.articles.map((article) => (
-                <div
-                  key={article.id}
-                  className="article-item"
-                  onClick={() => toggleArticle(topic.id, article.id)}
-                >
-                  <div className="arrow-icon">
-                    {article.isOpen ? (
-                      <MdKeyboardArrowDown />
-                    ) : (
-                      <MdKeyboardArrowRight />
+                <React.Fragment key={article.id}>
+                  <hr className="separator" />
+                  <div
+                    className="article-item"
+                    onClick={() => toggleArticle(topic.id, article.id)}
+                  >
+                    <div className="arrow-toggle">
+                      {article.isOpen ? (
+                        <MdKeyboardArrowDown />
+                      ) : (
+                        <MdKeyboardArrowRight />
+                      )}
+                    </div>
+
+                    <span className="article-text">{article.text}</span>
+                    {article.isOpen && (
+                      <div className="article-content">
+                        Your domains are a valuable online property. As in any
+                        investment, you want the most efficient, easy way to
+                        make sure your <br /> property is going to be profitable. Do
+                        you own more than 1,000 domains? As a professional
+                        domainer, you will find <br /> everything you need through
+                        Parkname to generate maximum profits from your domain
+                        portfolio.
+                      </div>
                     )}
                   </div>
-                  <span className="article-text">{article.text}</span>
-                  {article.isOpen && (
-                    <div className="article-content">
-                      Your domains are a valuable online property. As in any
-                      investment, you want the most efficient, easy way to make
-                      sure your property is going to be profitable. Do you own
-                      more than 1,000 domains? As a professional domainer, you
-                      will find everything you need through Parkname to generate
-                      maximum profits from your domain portfolio
-                    </div>
-                  )}
-                </div>
+                </React.Fragment>
               ))}
             </div>
           )}
