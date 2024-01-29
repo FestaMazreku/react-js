@@ -84,6 +84,11 @@
   .tab:last-child {
     margin-bottom: 0; 
   }
+
+  .responsivecard {
+    flex-direction: column;
+    grid-template-columns: 4fr; 
+  }
 }
 
 @media only screen and (max-width: 480px) {
