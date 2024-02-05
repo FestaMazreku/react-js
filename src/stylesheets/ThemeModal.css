@@ -68,7 +68,7 @@
 .color-right {
     margin: 30px;
     margin-right: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .color-right input[type="color"] {
@@ -92,25 +92,32 @@
     .separator {
         max-width: 100%; 
     }
+    .popup-inner {
+        max-width: 100%; 
+    }
 }
 
 @media (max-width: 768px) {
     .separator {
-        max-width: 100%;
+        max-width: 100%; 
+    }
+    .popup-inner {
+        max-width: 100%; 
     }
 }
 
 @media only screen and (max-width: 480px) {
+    .separator {
+        max-width: 100%; 
+    }
     .cancel-btn,
     .save-btn {
         width: 100%;
         margin: 8px 0;
     }
-    
+
     .popup {
-        width:20%;
-        align-items: center;
-        padding-left: 40px;
-        display:block;
+        width: 80%; 
+        padding: 20px; 
     }
 }
