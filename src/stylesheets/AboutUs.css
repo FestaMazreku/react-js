@@ -43,8 +43,9 @@
     font-size: 22px;
     color: #2e2e2e;
     position: absolute;
-    margin-left: 1190px;
+    margin-left: 94%; 
 }
+
 
 .arrow-icon {
     cursor: pointer;
@@ -73,11 +74,11 @@
       font-size: 18px;
     }
   
-    .arrow-icon,
     .arrow-toggle {
-      font-size: 20px;
-    }
-  
+        font-size: 20px;
+        margin-left: 80%; 
+      }
+
     .profile-icon {
       width: 40px;
       height: 40px;

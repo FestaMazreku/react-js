@@ -100,7 +100,6 @@ const cardData = [
 
 function Home() {
   const [buttonPopup, setButtonPopup] = useState(false);
-
   return (
     <div className="App">
       <IconContainer />
