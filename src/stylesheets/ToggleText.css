@@ -6,6 +6,9 @@
     padding: 7px;
     border-radius: 5px;
     position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
   
 .toggle-container.open {
@@ -57,4 +60,14 @@
     font-size: 14px;
     color: #666; 
     margin: 10px 0; 
+}
+
+@media (max-width: 768px) {
+    .toggle-container {
+        padding: 10px; 
+    }
+
+    .arrow-icon {
+        margin-top: 5px;
+    }
 }

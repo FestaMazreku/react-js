@@ -106,7 +106,7 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 425px) {
     .separator {
         max-width: 100%; 
     }
